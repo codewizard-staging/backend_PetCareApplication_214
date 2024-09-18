@@ -1,0 +1,3646 @@
+{
+	"info": 
+	{
+		"_postman_id": "1a33718f-0e82-4bb3-b13c-2b4aec9504d2",
+		"name": "PetCareApplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7529375"
+	},
+	"item": [
+	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "PetService",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PetServiceByServiceId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"ServiceType\":\"PetBoarding\",\"ServiceId\":45,\"Price\":726413.83,\"DogSize\":\"scald\",\"ServiceAt\":\"polish\",\"DurationInDays\":59,\"DurationInHours\":30,\"OnlineBookingAllowed\":true,\"AdvPaymentReqd\":true}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a PetService",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"ServiceType\":\"PetBoarding\",\"ServiceId\":45,\"Price\":726413.83,\"DogSize\":\"scald\",\"ServiceAt\":\"polish\",\"DurationInDays\":59,\"DurationInHours\":30,\"OnlineBookingAllowed\":true,\"AdvPaymentReqd\":true}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of ServiceId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)/ServiceId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(ServiceId)",
+										"ServiceId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=ServiceId eq 45\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ServiceId eq 45\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of ServiceType",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)/ServiceType/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(ServiceType)",
+										"ServiceType",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=ServiceType eq PetBoarding\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ServiceType eq PetBoarding\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Price",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)/Price/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(Price)",
+										"Price",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=Price eq 726413.83\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Price eq 726413.83\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of DogSize",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)/DogSize/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(DogSize)",
+										"DogSize",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=DogSize eq 'scald'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "DogSize eq 'scald'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of ServiceAt",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)/ServiceAt/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(ServiceAt)",
+										"ServiceAt",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=ServiceAt eq 'polish'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ServiceAt eq 'polish'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of DurationInDays",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)/DurationInDays/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(DurationInDays)",
+										"DurationInDays",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=DurationInDays eq 59\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "DurationInDays eq 59\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of DurationInHours",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)/DurationInHours/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(DurationInHours)",
+										"DurationInHours",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=DurationInHours eq 30\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "DurationInHours eq 30\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of OnlineBookingAllowed",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)/OnlineBookingAllowed/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(OnlineBookingAllowed)",
+										"OnlineBookingAllowed",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=OnlineBookingAllowed eq true\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OnlineBookingAllowed eq true\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of AdvPaymentReqd",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices(<<replace_with_keyFieldValue>>)/AdvPaymentReqd/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices(AdvPaymentReqd)",
+										"AdvPaymentReqd",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=AdvPaymentReqd eq true\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "AdvPaymentReqd eq true\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+			{
+					"name": "System Query Options 3",
+					"item": [		        
+	
+	
+	{
+							"name": "Get $filter option on enum",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$filter=ServiceType eq <<Model.PetServiceType'PetBoarding'>>",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ServiceType eq <<Model.PetServiceType'PetBoarding'>>"
+										}
+									]
+								}
+							},
+							"response": []
+						} 
+					    ]
+				        },
+	{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetServices?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetServices"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "PetOwner",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PetOwnerByOwnerId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"OwnerId\":6,\"OwnerName\":\"Deeptimoyee Dhawan\",\"ContactPrimary\":\"retire\",\"ContactSecondary\":\"swallow\",\"Address\":\"925 Mishra Road\",\"Pincode\":\"499567\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a PetOwner",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"OwnerId\":6,\"OwnerName\":\"Deeptimoyee Dhawan\",\"ContactPrimary\":\"retire\",\"ContactSecondary\":\"swallow\",\"Address\":\"925 Mishra Road\",\"Pincode\":\"499567\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of OwnerId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)/OwnerId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(OwnerId)",
+										"OwnerId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$filter=OwnerId eq 6\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OwnerId eq 6\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of OwnerName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)/OwnerName/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(OwnerName)",
+										"OwnerName",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$filter=OwnerName eq 'Deeptimoyee Dhawan'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OwnerName eq 'Deeptimoyee Dhawan'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of ContactPrimary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)/ContactPrimary/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(ContactPrimary)",
+										"ContactPrimary",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$filter=ContactPrimary eq 'retire'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ContactPrimary eq 'retire'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of ContactSecondary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)/ContactSecondary/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(ContactSecondary)",
+										"ContactSecondary",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$filter=ContactSecondary eq 'swallow'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ContactSecondary eq 'swallow'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Address",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)/Address/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(Address)",
+										"Address",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$filter=Address eq '925 Mishra Road'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Address eq '925 Mishra Road'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Pincode",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)/Pincode/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(Pincode)",
+										"Pincode",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$filter=Pincode eq '499567'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Pincode eq '499567'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ,
+		{
+					"name": "Navigation  Request",
+					"item": [
+								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)/Pets",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(<<replace_with_keyFieldValue>>)",
+										"Pets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on PetOwners navigation property Pets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetOwners(<<replace_with_keyFieldValue>>)?$expand=Pets",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetOwners(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "Pets"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+					    ]
+				        }
+  ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "PetCareCenter",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PetCareCenterByPcId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"PcId\":24,\"Address\":\"3279 Dwivedi Station\",\"Name\":\"Deeptimayee Pothuvaal\",\"Description\":\"drop\",\"BranchName\":\"Maheswar Shukla\",\"Latitude\":211823.48,\"Longitude\":413699.88,\"Pincode\":30,\"IsOperational\":true,\"BusinessHours\":[\"describe\"],\"NearbyLocation\":\"merge\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a PetCareCenter",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"PcId\":24,\"Address\":\"3279 Dwivedi Station\",\"Name\":\"Deeptimayee Pothuvaal\",\"Description\":\"drop\",\"BranchName\":\"Maheswar Shukla\",\"Latitude\":211823.48,\"Longitude\":413699.88,\"Pincode\":30,\"IsOperational\":true,\"BusinessHours\":[\"describe\"],\"NearbyLocation\":\"merge\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of PcId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/PcId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(PcId)",
+										"PcId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=PcId eq 24\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "PcId eq 24\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Address",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Address/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(Address)",
+										"Address",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=Address eq '3279 Dwivedi Station'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Address eq '3279 Dwivedi Station'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Name/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(Name)",
+										"Name",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=Name eq 'Deeptimayee Pothuvaal'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Name eq 'Deeptimayee Pothuvaal'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Description",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Description/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(Description)",
+										"Description",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=Description eq 'drop'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Description eq 'drop'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of BranchName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/BranchName/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(BranchName)",
+										"BranchName",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=BranchName eq 'Maheswar Shukla'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "BranchName eq 'Maheswar Shukla'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Latitude",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Latitude/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(Latitude)",
+										"Latitude",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=Latitude eq 211823.48\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Latitude eq 211823.48\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Longitude",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Longitude/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(Longitude)",
+										"Longitude",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=Longitude eq 413699.88\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Longitude eq 413699.88\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Pincode",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Pincode/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(Pincode)",
+										"Pincode",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=Pincode eq 30\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Pincode eq 30\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of IsOperational",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/IsOperational/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(IsOperational)",
+										"IsOperational",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=IsOperational eq true\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "IsOperational eq true\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of BusinessHours",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/BusinessHours/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(BusinessHours)",
+										"BusinessHours",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=BusinessHours eq ''\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "BusinessHours eq ''\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of NearbyLocation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/NearbyLocation/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(NearbyLocation)",
+										"NearbyLocation",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$filter=NearbyLocation eq 'merge'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "NearbyLocation eq 'merge'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ,
+		{
+					"name": "Navigation  Request",
+					"item": [
+								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Logo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)",
+										"Logo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on PetCareCenters navigation property Logo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)?$expand=Logo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "Logo"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+,  								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Images",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)",
+										"Images"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on PetCareCenters navigation property Images",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)?$expand=Images",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "Images"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+,  								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Services",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)",
+										"Services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on PetCareCenters navigation property Services",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)?$expand=Services",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "Services"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+,  								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Pets",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)",
+										"Pets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on PetCareCenters navigation property Pets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)?$expand=Pets",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "Pets"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+,  								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)/Supervisor",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)",
+										"Supervisor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on PetCareCenters navigation property Supervisor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/PetCareCenters(<<replace_with_keyFieldValue>>)?$expand=Supervisor",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"PetCareCenters(<<replace_with_keyFieldValue>>)"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "Supervisor"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+					    ]
+				        }
+  ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ManagerByMId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MId\":51,\"FullName\":\"Oormila Khatri Sr.\",\"ContactNumber\":\"corrupt\",\"Address\":\"23947 Pushti Islands\",\"SecondaryContactNumber\":\"impinge\",\"Pincode\":1}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a Manager",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MId\":51,\"FullName\":\"Oormila Khatri Sr.\",\"ContactNumber\":\"corrupt\",\"Address\":\"23947 Pushti Islands\",\"SecondaryContactNumber\":\"impinge\",\"Pincode\":1}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of MId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers(<<replace_with_keyFieldValue>>)/MId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers(MId)",
+										"MId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$filter=MId eq 51\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "MId eq 51\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of FullName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers(<<replace_with_keyFieldValue>>)/FullName/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers(FullName)",
+										"FullName",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$filter=FullName eq 'Oormila Khatri Sr.'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "FullName eq 'Oormila Khatri Sr.'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of ContactNumber",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers(<<replace_with_keyFieldValue>>)/ContactNumber/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers(ContactNumber)",
+										"ContactNumber",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$filter=ContactNumber eq 'corrupt'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ContactNumber eq 'corrupt'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Address",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers(<<replace_with_keyFieldValue>>)/Address/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers(Address)",
+										"Address",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$filter=Address eq '23947 Pushti Islands'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Address eq '23947 Pushti Islands'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of SecondaryContactNumber",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers(<<replace_with_keyFieldValue>>)/SecondaryContactNumber/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers(SecondaryContactNumber)",
+										"SecondaryContactNumber",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$filter=SecondaryContactNumber eq 'impinge'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "SecondaryContactNumber eq 'impinge'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Pincode",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers(<<replace_with_keyFieldValue>>)/Pincode/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers(Pincode)",
+										"Pincode",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$filter=Pincode eq 1\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Pincode eq 1\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Managers?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Managers"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ]},     	
+	
+	{
+			"name": "Document",
+			"item": [
+				{
+	
+					"name": "Post media entity",
+					"request": {
+						"method": "POST",
+						"header": [
+		                  {
+								"key": "DocId",
+								"value": "<<replace with value>>",
+								"type": "text"
+							}
+, 		                  {
+								"key": "DocName",
+								"value": "<<replace with value>>",
+								"type": "text"
+							}
+, 		                  {
+								"key": "FileName",
+								"value": "<<replace with value>>",
+								"type": "text"
+							}
+, 		                  {
+								"key": "FileType",
+								"value": "<<replace with value>>",
+								"type": "text"
+							}
+, 		                  {
+								"key": "FileDescription",
+								"value": "<<replace with value>>",
+								"type": "text"
+							}
+							 ],
+	                       "body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n        <svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 100 100\">\r\n            <g stroke=\"darkmagenta\" stroke-width=\"16\" fill=\"crimson\">\r\n                <circle cx=\"50\" cy=\"50\" r=\"42\"/>\r\n            </g>\r\n    \t</svg>",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{ServiceRoot}}/Documents",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{ServiceRoot}}",
+								"Documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Entity set",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{ServiceRoot}}/Documents",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{ServiceRoot}}",
+								"Documents"
+							]
+						}
+					},
+					"response": []
+				}
+				]
+				},
+  	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PetByPetId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"PetId\":99,\"PetName\":\"Baalaaditya Rana\",\"Breed\":\"cry\",\"AnimalType\":\"repair\",\"Gender\":\"get\",\"Color\":\"show\",\"Weight\":619435.6,\"Height\":224844.02}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a Pet",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"PetId\":99,\"PetName\":\"Baalaaditya Rana\",\"Breed\":\"cry\",\"AnimalType\":\"repair\",\"Gender\":\"get\",\"Color\":\"show\",\"Weight\":619435.6,\"Height\":224844.02}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(<<replace_with_keyFieldValue>>)"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of PetId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)/PetId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(PetId)",
+										"PetId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$filter=PetId eq 99\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "PetId eq 99\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of PetName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)/PetName/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(PetName)",
+										"PetName",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$filter=PetName eq 'Baalaaditya Rana'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "PetName eq 'Baalaaditya Rana'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Breed",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)/Breed/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(Breed)",
+										"Breed",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$filter=Breed eq 'cry'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Breed eq 'cry'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of AnimalType",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)/AnimalType/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(AnimalType)",
+										"AnimalType",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$filter=AnimalType eq 'repair'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "AnimalType eq 'repair'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Gender",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)/Gender/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(Gender)",
+										"Gender",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$filter=Gender eq 'get'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Gender eq 'get'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Color",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)/Color/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(Color)",
+										"Color",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$filter=Color eq 'show'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Color eq 'show'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Weight",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)/Weight/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(Weight)",
+										"Weight",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$filter=Weight eq 619435.6\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Weight eq 619435.6\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Height",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets(<<replace_with_keyFieldValue>>)/Height/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets(Height)",
+										"Height",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$filter=Height eq 224844.02\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Height eq 224844.02\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Pets?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Pets"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ,       		{
+					"name": "metadata request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{ServiceRoot}}/$metadata",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{ServiceRoot}}",
+								"$metadata"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]}
